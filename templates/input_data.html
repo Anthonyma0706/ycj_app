@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Input Data</h2>
+    <form action="/input_data" method="post">
+        <label for="日期">日期:</label><br>
+        <input type="date" id="日期" name="日期"><br>
+
+
+        <label for="厂家名称">厂家名称:</label><br>
+        <input type="text" id="厂家名称" name="厂家名称"><br>
+
+        <label for="项目">项目:</label><br>
+        <input type="text" id="项目" name="项目"><br>
+
+        <label for="商品名称">商品名称:</label><br>
+        <input type="text" id="商品名称" name="商品名称"><br>
+
+        <label for="客户">客户:</label><br>
+        <input type="text" id="客户" name="客户"><br>
+
+        <label for="入库">入库:</label><br>
+        <input type="text" id="入库" name="入库"><br>
+
+        <label for="出库">出库:</label><br>
+        <input type="text" id="出库" name="出库"><br>
+
+        <label for="余数">余数:</label><br>
+        <input type="text" id="余数" name="余数"><br>
+
+        <label for="单位">单位:</label><br>
+        <input type="text" id="单位" name="单位"><br>
+
+        <label for="单价">单价:</label><br>
+        <input type="text" id="单价" name="单价"><br>
+
+        <label for="总价">总价:</label><br>
+        <input type="text" id="总价" name="总价"><br>
+
+        <label for="收入">收入:</label><br>
+        <input type="text" id="收入" name="收入"><br>
+
+        <label for="利润">利润:</label><br>
+        <input type="text" id="利润" name="利润"><br>
+
+        <label for="filename">Select a file:</label><br>
+        <select id="filename" name="filename">
+        {% for file in files %}
+          <option value="{{ file }}">{{ file }}</option>
+        {% endfor %}
+        </select><br>
+
+        <input type="submit">
+    </form>
+
+    {% if remain %}
+    <h3>New Remaining Stock: {{ remain }}</h3>
+    {% endif %}
+</body>
+</html>
+
+
+

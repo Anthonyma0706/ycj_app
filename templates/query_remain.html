@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Query Remaining Stock</h2>
+    <form action="/query_remain" method="post">
+        <label for="factory">Factory:</label><br>
+        <input type="text" id="factory" name="factory"><br>
+
+        <label for="product">Product:</label><br>
+        <input type="text" id="product" name="product"><br>
+
+        <input type="submit">
+    </form>
+
+    {% if remain is defined %}
+        <p>Remaining Stock: {{ remain }}</p>
+    {% endif %}
+</body>
+</html>
